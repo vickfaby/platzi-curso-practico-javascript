@@ -1,0 +1,82 @@
+:root {
+    --color_de_fondo: #F2F2F2; 
+    --color_de_fuente:  #B4B4B4;
+    --fuente:'Raleway', sans-serif;
+}
+body {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    background: var(--color_de_fondo);
+    color: var(--color_de_fuente);
+    font-family: var(--fuente);
+    text-align: center;
+}
+.container {
+    display: grid;
+    grid-template-columns: minmax(320px, 400px);
+    grid-auto-rows: 1fr;
+    justify-content: center;
+}
+.container label, .container input {
+    display: block;
+    justify-items: center;
+    margin: 14px auto;
+}
+.card {
+    height: auto;
+    width: auto;
+    min-width: 200px;
+    max-width: 500px;
+    margin: 30px 10px;
+    border: none;
+    border-radius: 20px;
+    background: var(--color_de_fondo);
+    box-shadow:  
+    8px 8px 13px #6c6c6c,
+    -8px -8px 13px #ffffff;
+}
+.card label {
+    color: black;
+}
+.card h2 {
+    margin: 20px 20px;
+    text-align: center;
+}
+.card form {
+    place-content: center;
+    text-align: center;
+}
+
+.botones {
+    display: block;
+    margin: 5px 0 40px;
+}
+button {
+    height: 40px;
+    width: 180px;
+    margin: 10px 0;
+    box-shadow:  
+    8px 8px 13px #6c6c6c,
+    -8px -8px 13px #ffffff;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--color_de_fondo);
+    color: var(--color_de_fuente);
+}
+input {
+    border: none;
+    width: 90%;
+    height: 30px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+@media screen and (min-width:1200px) {
+    .container {
+        display: grid;
+        grid-template-columns:  repeat(3,minmax(320px, auto));
+        grid-auto-rows: 1fr;
+        column-gap: 20px;
+    }
+}
